@@ -1,146 +1,153 @@
-# NOVA - Intelligent Vision Assistant
+Based on your uploaded project files, this is a professional GitHub README description for your **NOVA AI Assistant** project. It highlights the voice assistant, AI integration, computer vision, gesture control, system automation, and app launching capabilities found in your code.   
 
-A desktop AI assistant inspired by Iron Man's JARVIS, combining voice interaction, computer vision, hand gesture control, and conversational AI.
+# 🤖 NOVA - Intelligent Vision AI Assistant
 
-## Features
+A professional-grade AI-powered desktop assistant inspired by JARVIS from Iron Man. NOVA combines voice interaction, computer vision, gesture recognition, AI conversation, application control, and system automation into a single intelligent assistant.
 
-- 🎤 **Voice Interaction** - Speech-to-text and text-to-speech
-- 🧠 **AI Brain** - Powered by Claude API for intelligent conversations
-- 👁️ **Object Detection** - Real-time YOLOv8 vision system
-- 🤚 **Gesture Control** - MediaPipe hand tracking with gesture commands
-- 💻 **System Control** - Launch apps, search web, control media
-- 🎨 **Futuristic UI** - PyQt6 interface with glassmorphism design
+![NOVA Banner](https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png)
 
-## Quick Start
+## 🌟 Key Features
 
-### Prerequisites
+* 🎙️ **Voice Assistant**
 
-- Python 3.10 or higher
-- Webcam and microphone
-- Windows OS (currently optimized for Windows)
+  * Real-time Speech-to-Text using Google Speech Recognition.
+  * Natural Text-to-Speech responses using Windows SAPI.
+  * Smart listening indicators and voice feedback.
 
-### Installation
+* 🧠 **AI Brain Integration**
 
-1. **Clone or navigate to the project directory**
+  * Powered by Claude AI for intelligent conversations.
+  * Context-aware responses with memory support.
+  * JARVIS-inspired personality and interaction style.
 
-```bash
-cd c:\Users\shame\OneDrive\Desktop\miniprjct\jarviss
+* 👁️ **Computer Vision**
+
+  * Real-time camera monitoring.
+  * Object detection and scene understanding.
+  * Visual query support such as:
+
+    * "What do you see?"
+    * "Identify this object"
+    * "Describe the scene"
+
+* ✋ **Gesture Recognition**
+
+  * Hand gesture-based control.
+  * Open Palm activation system.
+  * Air Drawing support for interactive control.
+
+* 💻 **System Automation**
+
+  * Screenshot capture.
+  * Screen lock.
+  * Shutdown, restart, and sleep controls.
+  * Volume management and media control.
+
+* 🚀 **Smart Application Launcher**
+
+  * Open applications using natural voice commands.
+  * Launch browsers, editors, media apps, and Windows utilities.
+  * Dynamic indexing of installed Windows applications.
+
+* 🌐 **Web & Productivity Integration**
+
+  * Web search commands.
+  * Quick access to YouTube, LinkedIn, Chrome, VS Code, Spotify, Discord, and more.
+
+## 🏗️ Project Architecture
+
+```text
+NOVA/
+│
+├── main.py                    # Main application
+│
+├── core/
+│   ├── ai_brain.py            # Claude AI integration
+│   ├── speech_handler.py      # STT & TTS engine
+│   └── intent_parser.py       # Command routing
+│
+├── system/
+│   ├── app_launcher.py        # Application launcher
+│   └── system_commands.py     # OS automation
+│
+├── vision/
+│   ├── object_detector.py     # Object detection
+│   ├── gesture_recognition.py # Hand tracking
+│   └── camera_thread.py       # Camera management
+│
+├── config.yaml
+├── .env
+└── requirements.txt
 ```
 
-2. **Create virtual environment**
+## 🎯 Supported Commands
 
-```bash
-python -m venv venv
-venv\Scripts\activate
+### Voice Commands
+
+```text
+Open Chrome
+Launch VS Code
+Search Python tutorials
+Take Screenshot
+Lock Screen
+Shutdown Computer
+What time is it?
+What's the weather?
+Start Air Drawing
+What do you see?
 ```
 
-3. **Install dependencies**
+## 🚀 Quick Start
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Set up API keys**
+### Configure Environment Variables
 
-Create a `.env` file (copy from `.env.example`):
+Create a `.env` file:
 
-```bash
-copy .env.example .env
+```env
+ANTHROPIC_API_KEY=your_api_key
+OPENAI_API_KEY=optional
+ELEVENLABS_API_KEY=optional
+PICOVOICE_API_KEY=optional
 ```
 
-Edit `.env` and add your API keys:
-- `ANTHROPIC_API_KEY` - Required for AI features (get from https://console.anthropic.com/)
-- Other keys are optional
-
-5. **Run NOVA**
+### Run NOVA
 
 ```bash
 python main.py
 ```
 
-## Usage
+## 🛠️ Technologies Used
 
-### Voice Commands
+* Python 3.11+
+* Claude API
+* OpenCV
+* MediaPipe
+* SpeechRecognition
+* PyAutoGUI
+* PyTTSX3
+* Windows SAPI
+* PyQt
+* NumPy
 
-- **"What do you see?"** - Describes objects detected by camera
-- **"What time is it?"** - Tells current time
-- **"Open Chrome"** - Launches applications
-- **"Search for Python tutorials"** - Opens web search
-- **"Volume up/down"** - Controls system volume
-- **"Screenshot"** - Takes a screenshot
-- **"Set performance mode"** - Switch to high performance power mode
-- **"Switch to balanced mode"** - Switch to balanced/custom power mode
-- **"Change to power saver mode"** - Switch to power saver/smart mode
-- **"What's the power mode?"** - Check current power mode
+## 🎯 Future Enhancements
 
-### Hand Gestures
+* Face Recognition
+* Smart Home Integration
+* LLM Agent Workflows
+* Wake Word Detection
+* Multi-Agent AI System
+* Custom Computer Vision Models
+* IoT Device Control
 
-- ✋ **Open Palm** - Activate voice listening
-- ✊ **Fist** - Stop/mute speech
-- ☝️ **Point Up** - Scroll up (future)
-- 👇 **Point Down** - Scroll down (future)
-- 👉 **Swipe Right** - Next panel (future)
-- 👈 **Swipe Left** - Previous panel (future)
+## 🛡️ License
 
-### Conversation
+This project is intended for educational, research, and prototyping purposes.
 
-Just talk naturally! NOVA uses Claude AI to understand and respond to your questions and requests.
+---
 
-## Configuration
-
-Edit `config.yaml` to customize:
-
-- API providers and models
-- Vision settings (YOLO model, confidence threshold)
-- Audio settings (sample rate, chunk size)
-- UI theme (colors, transparency, window size)
-
-## Project Structure
-
-```
-jarviss/
-├── core/              # Voice, AI, and intent parsing
-├── vision/            # Object detection and gestures
-├── control/           # System commands and app launcher
-├── ui/                # PyQt6 interface
-├── utils/             # Configuration and logging
-├── config.yaml        # Configuration file
-├── requirements.txt   # Python dependencies
-└── main.py           # Entry point
-```
-
-## Troubleshooting
-
-### "No module named 'PyQt6'"
-```bash
-pip install PyQt6
-```
-
-### "API key not set"
-Make sure you've created `.env` file with your `ANTHROPIC_API_KEY`
-
-### Camera not working
-- Check if another application is using the camera
-- Try changing camera index in code (0 to 1)
-
-### Low FPS
-- Use smaller YOLO model (`yolov8n.pt` instead of `yolov8m.pt`)
-- Reduce camera resolution
-- Enable GPU if available
-
-## Future Enhancements
-
-- Wake word detection with Porcupine
-- Premium TTS with ElevenLabs
-- Weather API integration
-- Smart home control
-- Multi-language support
-- Emotion detection
-
-## License
-
-MIT License - Feel free to use and modify!
-
-## Credits
-
-Inspired by Iron Man's JARVIS and modern voice assistants.
