@@ -1,0 +1,55 @@
+# NOVA Configuration File
+
+app:
+  name: "NOVA"
+  version: "1.0.0"
+  wake_word: "hey nova"
+  debug_mode: true
+
+api:
+  # LLM Provider: anthropic, openai, ollama
+  llm_provider: "anthropic"
+  llm_model: "claude-sonnet-4-20250514"
+  llm_api_key: "${ANTHROPIC_API_KEY}"
+  
+  # Speech-to-Text: whisper, google, azure
+  speech_to_text: "google"
+  
+  # Text-to-Speech: elevenlabs, azure, pyttsx3
+  text_to_speech: "pyttsx3"
+  tts_voice_rate: 180
+  tts_volume: 0.9
+
+vision:
+  object_detection: true
+  yolo_model: "yolov8n.pt"  # n=nano (fastest), s=small, m=medium
+  confidence_threshold: 0.5
+  max_detections: 10
+  
+  gesture_recognition: true
+  gesture_cooldown: 1.0  # seconds between gesture triggers
+  min_detection_confidence: 0.7
+  min_tracking_confidence: 0.5
+
+audio:
+  sample_rate: 16000
+  chunk_size: 1024
+  channels: 1
+  silence_threshold: 500
+  silence_duration: 1.5  # seconds of silence before stopping recording
+
+ui:
+  theme: "dark"
+  transparency: 0.85
+  accent_color: "#00d9ff"
+  background_color: "#0a0e27"
+  fps_target: 60
+  window_width: 1400
+  window_height: 900
+  font_family: "Segoe UI"  # Will try to load Orbitron if available
+
+system:
+  enable_system_control: true
+  enable_app_launcher: true
+  enable_web_search: true
+  enable_media_control: true

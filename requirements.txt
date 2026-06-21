@@ -1,0 +1,39 @@
+# NOVA - Intelligent Vision Assistant
+# Core Dependencies
+
+# UI Framework
+PyQt6>=6.6.1
+PyQt6-Qt6>=6.6.1
+
+# Computer Vision
+opencv-python>=4.9.0
+ultralytics>=8.3.0
+mediapipe>=0.10.30
+
+# AI & NLP
+anthropic>=0.18.1
+openai>=1.12.0
+
+# Speech Recognition & Synthesis
+SpeechRecognition>=3.10.1
+pyttsx3>=2.90
+pyaudio>=0.2.14
+sounddevice>=0.4.6
+
+# Wake Word Detection (optional)
+# pvporcupine>=3.0.2
+
+# System Control
+pyautogui>=0.9.54
+psutil>=5.9.8
+
+# Utilities
+numpy>=1.26.3
+pillow>=10.2.0
+pyyaml>=6.0.1
+python-dotenv>=1.0.1
+requests>=2.31.0
+
+# Audio Processing (optional)
+# librosa>=0.10.1
+# soundfile>=0.12.1
